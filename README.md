@@ -10,17 +10,17 @@
 [![GitHub Discussion][github-discussions-badge]][github-discussions-link]
 
 <!-- prettier-ignore-start -->
-[actions-badge]:            https://github.com/willingc/discuss_nutshell/workflows/CI/badge.svg
-[actions-link]:             https://github.com/willingc/discuss_nutshell/actions
-[conda-badge]:              https://img.shields.io/conda/vn/conda-forge/discuss_nutshell
-[conda-link]:               https://github.com/conda-forge/discuss_nutshell-feedstock
+[actions-badge]:            https://github.com/willingc/discuss-nutshell/workflows/CI/badge.svg
+[actions-link]:             https://github.com/willingc/discuss-nutshell/actions
+[conda-badge]:              https://img.shields.io/conda/vn/conda-forge/discuss-nutshell
+[conda-link]:               https://github.com/conda-forge/discuss-nutshell-feedstock
 [github-discussions-badge]: https://img.shields.io/static/v1?label=Discussions&message=Ask&color=blue&logo=github
-[github-discussions-link]:  https://github.com/willingc/discuss_nutshell/discussions
-[pypi-link]:                https://pypi.org/project/discuss_nutshell/
-[pypi-platforms]:           https://img.shields.io/pypi/pyversions/discuss_nutshell
-[pypi-version]:             https://img.shields.io/pypi/v/discuss_nutshell
-[rtd-badge]:                https://readthedocs.org/projects/discuss_nutshell/badge/?version=latest
-[rtd-link]:                 https://discuss_nutshell.readthedocs.io/en/latest/?badge=latest
+[github-discussions-link]:  https://github.com/willingc/discuss-nutshell/discussions
+[pypi-link]:                https://pypi.org/project/discuss-nutshell/
+[pypi-platforms]:           https://img.shields.io/pypi/pyversions/discuss-nutshell
+[pypi-version]:             https://img.shields.io/pypi/v/discuss-nutshell
+[rtd-badge]:                https://readthedocs.org/projects/discuss-nutshell/badge/?version=latest
+[rtd-link]:                 https://discuss-nutshell.readthedocs.io/en/latest/?badge=latest
 
 <!-- prettier-ignore-end -->
 
