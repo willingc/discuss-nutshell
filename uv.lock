@@ -904,7 +904,7 @@ wheels = [
 ]
 
 [[package]]
-name = "discourse-to-sqlite"
+name = "nutshell"
 source = { editable = "." }
 dependencies = [
     { name = "anthropic" },

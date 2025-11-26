@@ -1,9 +1,9 @@
-site_name: discourse-to-sqlite
-site_url: https://discourse-to-sqlite.readthedocs.io/
+site_name: nutshell
+site_url: https://nutshell.readthedocs.io/
 site_author: "Carol Willing"
 
 repo_name: "willingc/nutshell"
-repo_url: "https://github.com/willingc/discourse-to-sqlite"
+repo_url: "https://github.com/willingc/nutshell"
 
 theme:
   name: material
