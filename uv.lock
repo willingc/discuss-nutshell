@@ -904,7 +904,7 @@ wheels = [
 ]
 
 [[package]]
-name = "nutshell"
+name = "discuss_nutshell"
 source = { editable = "." }
 dependencies = [
     { name = "anthropic" },

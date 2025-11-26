@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 
 [project]
-name = "nutshell"
+name = "discuss_nutshell"
 authors = [
   { name = "Carol Willing", email = "willingc@gmail.com" },
 ]
@@ -47,10 +47,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/willingc/nutshell"
-"Bug Tracker" = "https://github.com/willingc/nutshell/issues"
+Homepage = "https://github.com/willingc/discuss_nutshell"
+"Bug Tracker" = "https://github.com/willingc/discuss_nutshell/issues"
 Discussions = "https://github.com/willingc/nutsshell/discussions"
-Changelog = "https://github.com/willingc/nutshell/releases"
+Changelog = "https://github.com/willingc/discuss_nutshell/releases"
 
 
 [dependency-groups]
@@ -81,7 +81,7 @@ nb = [
 ]
 [tool.hatch]
 version.source = "vcs"
-build.hooks.vcs.version-file = "src/nutshell/_version.py"
+build.hooks.vcs.version-file = "src/discuss_nutshell/_version.py"
 
 [tool.hatch.envs.default]
 # duplicate for now since hatch doesn't support groups yet
@@ -103,7 +103,7 @@ testpaths = [
 
 
 [tool.coverage]
-run.source = ["nutshell"]
+run.source = ["discuss_nutshell"]
 report.exclude_also = [
   '\.\.\.',
   'if typing.TYPE_CHECKING:',
@@ -120,7 +120,7 @@ disallow_untyped_defs = false
 disallow_incomplete_defs = false
 
 [[tool.mypy.overrides]]
-module = "nutshell.*"
+module = "discuss_nutshell.*"
 disallow_untyped_defs = true
 disallow_incomplete_defs = true
 
@@ -175,7 +175,7 @@ ignore = [
   "PLR2004",  # Magic value used in comparison
 ]
 # Uncomment if using a _compat.typing backport
-# typing-modules = ["nutshell._compat.typing"]
+# typing-modules = ["discuss_nutshell._compat.typing"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["T20"]

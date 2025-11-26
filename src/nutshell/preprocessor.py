@@ -4,7 +4,7 @@ from typing import Any
 
 import pandas as pd
 
-from nutshell.utils import clean_html, format_date
+from discuss_nutshell.utils import clean_html, format_date
 
 
 def read_json(file_path):

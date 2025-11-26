@@ -5,7 +5,7 @@ from pathlib import Path
 
 import requests
 
-from nutshell.preprocessor import (
+from discuss_nutshell.preprocessor import (
     clean_cooked_posts,
     create_dataframe,
     drop_columns,
@@ -16,7 +16,7 @@ from nutshell.preprocessor import (
     write_posts_json,
     write_posts_txt,
 )
-from nutshell.utils import display_dataframe
+from discuss_nutshell.utils import display_dataframe
 
 token = os.environ.get("DISCOURSE_API_KEY")
 headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}

@@ -1,9 +1,9 @@
-site_name: nutshell
-site_url: https://nutshell.readthedocs.io/
+site_name: discuss_nutshell
+site_url: https://discuss_nutshell.readthedocs.io/
 site_author: "Carol Willing"
 
-repo_name: "willingc/nutshell"
-repo_url: "https://github.com/willingc/nutshell"
+repo_name: "willingc/discuss_nutshell"
+repo_url: "https://github.com/willingc/discuss_nutshell"
 
 theme:
   name: material

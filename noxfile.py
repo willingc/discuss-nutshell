@@ -39,7 +39,7 @@ def pylint(session: nox.Session) -> None:
         "-m",
         "pylint",
         "--fail-under=0",
-        "src/nutshell",
+        "src/discuss_nutshell",
         *session.posargs,
     )
 

@@ -7,7 +7,7 @@ email: willingc@gmail.com
 full_name: Carol Willing
 license: MIT
 org: willingc
-project_name: nutshell
+project_name: discuss_nutshell
 project_short_description: Query Discourse and save results in SQLite
-url: https://github.com/willingc/nutshell
+url: https://github.com/willingc/discuss_nutshell
 vcs: true

@@ -14,5 +14,5 @@ free to go through through
 You can install this package via running:
 
 ```bash
-pip install nutshell
+pip install discuss_nutshell
 ```
