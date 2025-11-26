@@ -24,6 +24,29 @@
 
 <!-- prettier-ignore-end -->
 
+Improve your understanding of long Discourse threads.
+
+## Problem statement
+
+Discourse topics, such as on discuss.python.org, can get very long even over a
+few hours or days. These long threads makes it difficult to understand the
+conversation without spending one to three hours reading the thread. Discourse
+gives a predicted time to read the thread.
+
+On discuss.python.org, discussion threads about an individual [Python
+Enhancement Proposal](https://peps.python.org], PEP, can get very long. To
+understand the pros and cons of the PEP, reading the thread is needed.
+
+## Motivation
+
+I want a time-efficient way to read posts and summarize the key points. Ideally,
+I would like to understand the pros and cons of an individual PEPs.
+Understanding the authors' motivations and their background also is important.
+
+Recapping the conversation in an accurate way would be very helpful.
+
+## Initial approach
+
 Take a Discourse topic and parse it into posts that can be queried.
 
 - `data_loader.py`: Hit an endpoint and save to json
@@ -33,7 +56,12 @@ Take a Discourse topic and parse it into posts that can be queried.
 
 Take the db file and use datasette to view: `datasette data/posts_qa_logs.db`
 
-## Next phase
+Summarize individual posts and aggregate the summarized posts into one posts
+file that can be queried.
+
+Use a simple Gradio UI to interface with the user.
+
+## Next phases
 
 Authors, date/time, post number, uuid post, core dev (bool), cooked message,
 summarized message
@@ -42,8 +70,6 @@ summarized message
 - What are key topics found in the message
 - How many times has a person posted
 
-Summarize the thread.
-
 Report on pros and cons of the PEP proposal.
 
 - Embeddings
@@ -51,3 +77,6 @@ Report on pros and cons of the PEP proposal.
 - chunks
 
 Query with chunks and prompt
+
+Create a visual display of individual posts, summaries, author, and date posted.
+Display the summaries but allow the original post text to be accessed easily.
