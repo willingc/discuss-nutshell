@@ -25,6 +25,7 @@ from discuss_nutshell.preprocessor import (
     write_posts_txt,
 )
 from discuss_nutshell.utils import display_dataframe
+from discuss_nutshell.visualize import create_visualization_app
 
 current_path = Path.cwd()
 data_path = current_path / "data"
@@ -169,6 +170,25 @@ def cmd_query(args: argparse.Namespace) -> None:
         sys.exit(1)
 
 
+def cmd_visualize(args: argparse.Namespace) -> None:
+    """Handle the visualize command.
+
+    Parameters
+    ----------
+    args : argparse.Namespace
+        Parsed command-line arguments containing json_file.
+    """
+    try:
+        app = create_visualization_app(args.json_file)
+        app.launch()
+    except FileNotFoundError as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+    except (OSError, json.JSONDecodeError, ValueError, TypeError, KeyError) as e:
+        print(f"Error loading visualization: {e}", file=sys.stderr)
+        sys.exit(1)
+
+
 def cmd_load(args: argparse.Namespace) -> None:
     """Handle the load command.
 
@@ -284,6 +304,18 @@ def create_parser() -> argparse.ArgumentParser:
         help="Show verbose output during processing",
     )
 
+    # Visualize command
+    visualize_parser = subparsers.add_parser(
+        "visualize", help="Visualize Discourse posts as cards"
+    )
+    visualize_parser.add_argument(
+        "json_file",
+        type=str,
+        nargs="?",
+        default=None,
+        help="Path to JSON file with posts (default: ./data/104906_all_posts.json)",
+    )
+
     return parser
 
 
@@ -301,6 +333,13 @@ def main() -> None:
         cmd_query(args)
     elif args.command == "load":
         cmd_load(args)
+    elif args.command == "visualize":
+        if args.json_file is None:
+            json_file = data_path / "104906_all_posts.json"
+        else:
+            json_file = args.json_file
+        args.json_file = json_file
+        cmd_visualize(args)
     else:
         parser.print_help()
         sys.exit(1)
