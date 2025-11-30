@@ -1,4 +1,4 @@
-"""Discourse to SQLite package."""
+"""Discuss Nutshell package."""
 
 from discuss_nutshell._version import __version__
 

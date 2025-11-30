@@ -20,7 +20,7 @@ def read_json(file_path):
     dict | list
         Parsed JSON data.
     """
-    with Path.open(file_path, encoding="utf-8") as f:
+    with Path(file_path).open(encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -50,7 +50,7 @@ def write_json(data, file_path):
     file_path : Path
         Path where the JSON file should be written.
     """
-    with Path.open(file_path, "w", encoding="utf-8") as f:
+    with Path(file_path).open("w", encoding="utf-8") as f:
         json.dump(data, f)
 
 
@@ -199,7 +199,7 @@ def write_post_files(df, output_path):
         number = row["post_number"]
         clean_content = row["clean_cooked"]
 
-        with Path.open(output_path / f"post_{post_id}.txt", "w", encoding="utf-8") as f:
+        with Path(output_path / f"post_{post_id}.txt").open("w", encoding="utf-8") as f:
             f.write(f"Author: {author}\n")
             f.write(f"Created at: {created_at}\n")
             f.write(f"Number: {number}\n")
@@ -250,7 +250,7 @@ def write_posts_json(df: pd.DataFrame, topic_id: int, output_path: Path) -> None
 
     # Write the list to a JSON file
     output_file = output_path / f"{topic_id}_all_posts.json"
-    with Path.open(output_file, "w", encoding="utf-8") as f:
+    with Path(output_file).open("w", encoding="utf-8") as f:
         json.dump(posts_list, f, indent=2)
 
 
@@ -278,7 +278,7 @@ def write_posts_txt(df, output_path):
         number = row["post_number"]
         clean_content = row["clean_cooked"]
 
-        with Path.open(output_path / "all_posts.txt", "a", encoding="utf-8") as f:
+        with Path(output_path / "all_posts.txt").open("a", encoding="utf-8") as f:
             f.write(f"ID: {post_id}\n")
             f.write(f"Author: {author}\n")
             f.write(f"Created at: {created_at}\n")
